@@ -3,18 +3,25 @@ import {
   Copyright,
   EmptyMemories,
   Hero,
+  Profile,
   SignIn,
   Stripes,
 } from '@/components'
 
+import { cookies } from 'next/headers'
+
 export default function Home() {
+  const isAuthenticated = cookies().has('token')
+
   return (
     <main className="grid min-h-screen grid-cols-2 bg-[url(../assets/bg-stars.svg)] bg-cover">
       {/* Left */}
       <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 px-28 py-16">
         <Blur />
         <Stripes />
-        <SignIn />
+
+        {!isAuthenticated && <SignIn />}
+        {isAuthenticated && <Profile />}
         <Hero />
         <Copyright />
       </div>
