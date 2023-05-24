@@ -9,11 +9,11 @@ import { SplashScreen, Stack } from 'expo-router'
 import { useEffect, useState } from 'react'
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
-import { ImageBackground } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
-import Stripes from '../src/assets/stripes.svg'
-import blurBg from '../src/assets/bg-blur.png'
 import { styled } from 'nativewind'
+import { ImageBackground } from 'react-native'
+import blurBg from '../src/assets/bg-blur.png'
+import Stripes from '../src/assets/stripes.svg'
 
 const StyledStripes = styled(Stripes)
 
